@@ -30,6 +30,7 @@ public:
 	int getGrowSize();
 	void setGrowSize(int val);
 	int search(int val2);
+	void remove(int val);
 
 private:
 	bool expand();

@@ -104,6 +104,20 @@ int UnorderedArray<T>::search(int val2)
 }
 
 template <typename T>
+void UnorderedArray<T>::remove(int val)
+{
+	if (val > 0 && val < m_maxSize)
+	{
+		for (int index = val; index < m_numElements; index++)
+		{
+			m_array[val] = m_array[val + 1];
+		}
+		m_numElements = m_numElements - 1;
+	}
+}
+
+
+template <typename T>
 bool UnorderedArray<T>::expand() 
 {
 	if (m_growSize <= 0)
